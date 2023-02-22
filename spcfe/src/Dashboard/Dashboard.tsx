@@ -1,11 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { UserState } from "../store/reducer";
+import { Action, UserState } from "../store/reducer";
 import "./dashboard.css";
+
 import AdminDashboardPage from "./AdminDashboardPage";
 import { DashboardPage } from "./DashboardPage";
 
-export const Dashboard = () => {
+export const Dashboard = (action : Action,state:UserState) => {
   const admin_status = useSelector<UserState, boolean>(
     (state: UserState) => state.admin
   );
@@ -14,26 +15,30 @@ export const Dashboard = () => {
   const handleLogout = () => {
     dispatch({ type: "ENABLE_LOGOUT" });
   };
-
+const handleClick =() =>{
+  const {username,password}=action.login_details;
+  if (username==='admin' && password===''){
+    state.login_status=true
+    state.admin=true
+  }
+  <AdminDashboardPage />
+}
   return (
     <>
-    
-      
-      <div className={"navbar"}>
+  <div>
         <span className={"medium-text bold-text"}>Welcome User</span>
         <button onClick={handleLogout} className={"logout-button"}>
           Logout
         </button>
-      </div>
-     
-      
-      <div className={"dashboard-page"}>
-        <div>
+        {/* <button onClick={handleClick} className={"logout-button"}>
+          where
+        </button>
+         */}
           <DashboardPage/>
-        </div>
-        <div>
+        
+        
           
-        </div>
+      
       </div>
     
     </>

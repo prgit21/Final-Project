@@ -1,4 +1,5 @@
 import {nanoid} from 'nanoid';
+import { admindash } from '../Dashboard/AdminDashboardPage';
 import { LoginCreds } from '../loginPage/Login';
 
 export interface UserState {
@@ -17,7 +18,7 @@ export interface ImageTypes {
     label: string;
 }
 
-type Action = { type: string,login_status: boolean,login_details: LoginCreds,image_details: ImageTypes,label: string}
+export type Action = { type: string,login_status: boolean,login_details: LoginCreds,image_details: ImageTypes,label: string}
 
 export const userReducer =  (state:UserState = initialState ,action : Action ) => {
     console.log(state)
@@ -32,6 +33,7 @@ export const userReducer =  (state:UserState = initialState ,action : Action ) =
                 state.login_status=true
                 state.admin=true
                 return {...state}
+                
             }
             return {...state}
         }
