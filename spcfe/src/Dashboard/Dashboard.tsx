@@ -16,22 +16,27 @@ export const Dashboard = () => {
   };
 
   return (
-    <div>
+    <>
+    
+      
       <div className={"navbar"}>
         <span className={"medium-text bold-text"}>Welcome User</span>
         <button onClick={handleLogout} className={"logout-button"}>
           Logout
         </button>
       </div>
+     
+      
       <div className={"dashboard-page"}>
         <div>
-          {admin_status && <AdminDashboardPage />}
+          <DashboardPage/>
         </div>
         <div>
           
         </div>
       </div>
-    </div>
+    
+    </>
   );
 };
 
