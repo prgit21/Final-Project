@@ -1,8 +1,10 @@
-import  { useState } from "react";
-import './login.module.css';
+import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 
-import { LoginCreds } from "./LoginTypes";
+export type LoginCreds = {
+    username: string;
+    password: string;
+}
 
 const initValues:LoginCreds = {
     username: '',
@@ -12,7 +14,7 @@ const initValues:LoginCreds = {
 const Login = () => {
 
     const dispatch=useDispatch();
-    console.log("check pass")
+
     const [loginDetails,setLoginDetails]=useState<LoginCreds>(initValues);
 
     const handleLogin = () => {
