@@ -22,7 +22,7 @@ const Login = () => {
     }
 
     return(
-        <div>
+        <div className="style">
             <h2>Login Page</h2>
             <div>
                 <span>Username : </span>

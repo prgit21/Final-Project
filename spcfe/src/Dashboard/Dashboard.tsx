@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { UserState } from "../store/reducer";
 import "./dashboard.css";
 import AdminDashboardPage from "./AdminDashboardPage";
+import { DashboardPage } from "./DashboardPage";
 
 export const Dashboard = () => {
   const admin_status = useSelector<UserState, boolean>(
