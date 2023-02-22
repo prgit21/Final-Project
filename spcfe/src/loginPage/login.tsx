@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
 import AdminDashboardPage from "../Dashboard/AdminDashboardPage";
 import { Action, UserState } from "../store/reducer";
+import './login.module.css';
 
 
 export type LoginCreds = {
@@ -48,7 +49,7 @@ const Login = (action : Action,state:UserState) => {
                     type={'password'}
                 />
             </div>
-            <div>
+            <div className="login-button">
                 <button onClick={handleLogin}>Submit</button>
             </div>
         </div>
