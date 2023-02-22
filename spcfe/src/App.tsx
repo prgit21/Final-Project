@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import Login from './loginPage/Login'
+import Login from './loginPage/Login';
 import { useSelector } from 'react-redux';
 import { UserState } from './store/reducer';
 import {Dashboard} from './Dashboard/Dashboard'
@@ -11,8 +11,14 @@ function App() {
 
   return (
     <div className="App">
-      {!login_status && <Login/>}
-      {login_status && <Dashboard />}
+      {!login_status && <Login type={''} login_status={false} login_details={{
+        username: '',
+        password: ''
+      }}/>}
+      {login_status && <Dashboard type={''} login_status={false} login_details={{
+        username: '',
+        password: ''
+      }} />}
     </div>
   )
 }
