@@ -1,5 +1,12 @@
 export const DashboardPage =()=>{
+  
+  
     return(
-        <h3>dash page check</h3>
+        <h3>admin dash page check</h3>
     )
 }
+
+
+
+
+
