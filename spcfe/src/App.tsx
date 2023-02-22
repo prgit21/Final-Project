@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import Login from './loginPage/Login';
+import Login from './loginPage/login';
 import { useSelector } from 'react-redux';
 import { UserState } from './store/reducer';
 import {Dashboard} from './Dashboard/Dashboard'

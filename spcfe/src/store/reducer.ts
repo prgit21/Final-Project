@@ -1,4 +1,4 @@
-import { LoginCreds } from "../loginPage/Login";
+import { LoginCreds } from "../loginPage/login";
 
 
 export interface UserState {
